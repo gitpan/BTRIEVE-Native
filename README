@@ -6,6 +6,27 @@ DESCRIPTION
 
   This is a simple wrapper for the Btrieve single function API.
 
+INSTALLATION
+
+  To install this module type the following:
+
+     perl Makefile.PL
+     make
+     make test
+     make install
+
+PREREQUISITES
+
+  This module is tested on Windows NT 4.0 with the Microkernel
+  Interface  DLL (WBTRV32.DLL) version 6.15 from Btrieve
+  Technologies, Inc.
+  On that platform, it requires WBTRV32.DLL in your PATH,
+  e.g.:
+
+    set PATH=\opt\btrieve\bin;%PATH%
+
+  The module was build with Borland C++ 5.5.
+
 AUTHOR
 
   Steffen Goeldner <sgoeldner@cpan.org>
