@@ -25,7 +25,9 @@ PREREQUISITES
 
     set PATH=\opt\btrieve\bin;%PATH%
 
-  The module was build with Borland C++ 5.5.
+  To satisfy the linker, an import library may be required, e.g. WBTRV32.lib.
+  For Borland C++ 5.5, the generated .def file is used.
+  For MinGW, copy WBTRV32.DLL to WBTRV32.a.
 
 AUTHOR
 
@@ -33,7 +35,7 @@ AUTHOR
 
 COPYRIGHT
 
-  Copyright (c) 2003 Steffen Goeldner. All rights reserved.
+  Copyright (c) 2003, 2014 Steffen Goeldner. All rights reserved.
 
   This program is free software; you can redistribute it and/or
   modify it under the same terms as Perl itself.

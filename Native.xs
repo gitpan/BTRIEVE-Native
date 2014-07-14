@@ -29,10 +29,13 @@ Call( operation, posBlock, dataBuffer, dataLength, keyBuffer, keyNumber )
   char*          keyBuffer
   short          keyNumber
   CODE:
-  RETVAL = BTRCALL( operation, posBlock, dataBuffer, &dataLength, keyBuffer, MAX_KEY_SIZE, keyNumber );
+  if ( SvCUR(ST(1)) != POS_BLOCK_SIZE ) {
+    croak("posBlock length must be %d", POS_BLOCK_SIZE );
+  }
+  RETVAL = BTRCALL( operation, posBlock, dataBuffer, &dataLength, keyBuffer, SvCUR(ST(4)), keyNumber );
   OUTPUT:
-  posBlock   sv_setpvn((SV*)ST(1), posBlock  , POS_BLOCK_SIZE );
-  dataBuffer sv_setpvn((SV*)ST(2), dataBuffer, dataLength     );
+  posBlock   ;
+  dataBuffer SvCUR_set( (SV*)ST(2), dataLength );
   dataLength
-  keyBuffer  sv_setpvn((SV*)ST(4), keyBuffer , MAX_KEY_SIZE   );
+  keyBuffer  ;
   RETVAL

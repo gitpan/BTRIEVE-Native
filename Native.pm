@@ -4,7 +4,7 @@ require DynaLoader;
 
 @ISA = 'DynaLoader';
 
-$VERSION = '0.03';
+$VERSION = '0.04';
 
 bootstrap BTRIEVE::Native $VERSION;
 
@@ -96,7 +96,7 @@ Steffen Goeldner <sgoeldner@cpan.org>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2003 Steffen Goeldner. All rights reserved.
+Copyright (c) 2003, 2014 Steffen Goeldner. All rights reserved.
 
 This program is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.

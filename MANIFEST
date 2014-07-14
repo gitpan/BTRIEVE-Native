@@ -11,3 +11,4 @@ t/30step.t
 t/40get.t
 t/99drop.t
 t/My_Test.pm
+META.yml                                 Module meta-data (added by MakeMaker)
